@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Champ</title>
+    <link href='https://www.google.com/fonts#UsePlace:use/Collection:Candal' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../libs/bootstrap-3.3.6-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../app/css/style.css">
+    <link rel="stylesheet" href="../../app/css/jquery-ui.css">
+    <link rel="stylesheet" href="../../app/css/jquery-ui.structure.css">
+    <link rel="stylesheet" href="../../app/css/jquery-ui.theme.css">
+    <script src="../../libs/jquery/jquery-2.2.4.js"></script>
+    <script src="../../libs/bootstrap-3.3.6-dist/js/bootstrap.js"></script>
+    <script src="../../app/js/main.js"></script>
+    <script src="../../app/js/jquery-ui.js"></script>
+</head>
+<body>
+    <header>M3M0rY ChAmP</header>
+    <div id="counterContainer">
+        <label>Tries</label>
+        <span id="clickCounter"></span>
+        <label>Points</label>
+        <span id="pointCounter"></span>
+    </div>
+    <div id="topTimerContainer">
+    <div id="timerContainer">
+    <span id="timer"></span>
+    </div>
+    </div>
+    <div id="dialog-message" title="Time's Up!">
+        <p id="playerOne" style="display: block;">
+        </p>
+
+        <p id="playerTwo" style="display: none;">
+        </p>
+    </div>
+    <div id="dialog-message-end" title="Big Winner">
+        <span>
+        <p id="playerOneScore" style="display: block;">
+        </p>
+        </span>
+        <span>
+        <p id="playerTwoScore" style="display: block;">
+        </p>
+        </span>
+    </div>
+
+    <div class="container col-md-12" id="gameBoard"></div>
+
+</body>
+<script src="../../app/js/gamePlay/imgFlipperClick.js"></script>
+<script src="../../app/js/gui/stopClock.js"></script>
+</html>

@@ -1,0 +1,139 @@
+header .logo {
+    text-align: center;
+    font-size: 1.9em;
+    font-weight: bold;
+    color: gold;
+    -webkit-text-stroke: 1px #fff;
+    padding-bottom: 100px;
+}
+header {
+    text-align: center;
+    font-size: 1.9em;
+    font-weight: bold;
+    color: gold;
+    -webkit-text-stroke: 1px #fff;
+    padding: 10px 0 10px 0;
+}
+#timer{
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: gold;
+    -webkit-text-stroke: 1px #fff;
+}
+#counterContainer{
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: gold;
+    -webkit-text-stroke: 1px black;
+
+}
+body {
+    background-image: url("../images/tableGreen.jpg");
+    border-image-repeat: repeat;
+}
+#timerContainer{
+    height: 50px;
+    width: 100px;
+    margin-top: 20px;
+}
+#topTimerContainer{
+    text-align: center;
+    text-align: -webkit-center;
+}
+input#player1Field {
+    height: 50px;
+    text-align: center;
+    font-size: 1.4em;
+}
+input#player2Field {
+    height: 50px;
+    text-align: center;
+    font-size: 1.4em;
+}
+#playerTwo{
+    display: none;
+}
+.cards {
+    height:320px;
+    width:230px;
+    border: yellow 2px dashed;
+    margin: 20px 10px 10px 10px;
+    display: inline-block;
+}
+.container {
+    text-align: center;
+}
+
+.form-group {
+    margin: 0 100px 10px 100px;
+}
+.submitBtn {
+    text-align: center;
+}
+
+/*This next part is all about the flip animation*/
+.cardsContainer {
+    width: 235px;
+    height: 325px;
+    position: relative;
+    border: 2px dashed yellow;
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+    margin: 20px 10px 10px 10px;
+    display: inline-block;
+}
+.card {
+    width: 230px;
+    height: 320px;
+    position: absolute;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+}
+.card div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 260px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 140px;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.card .front {
+    padding: 2px 2px 2px 2px;
+}
+.card .back {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    padding: 2px 2px 2px 2px;
+    border: 2px whitesmoke solid;
+}
+.card.flipped {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+
+/*End of flip animation*/
+
+#player1Name{
+    font-style: oblique;
+}
