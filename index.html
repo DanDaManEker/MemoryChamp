@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M3M0rY ChAmP</title>
+    <link href='https://www.google.com/fonts#UsePlace:use/Collection:Candal' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../libs/bootstrap-3.3.6-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../app/css/style.css">
+    <script src="../libs/jquery/jquery-2.2.4.js"></script>
+    <script src="../libs/bootstrap-3.3.6-dist/js/bootstrap.js"></script>
+    <title>Memory Champ</title>
+    <script type="application/javascript">
+        $(document).ready(function() {
+            $('input[type="text"]').keyup(function() {
+                if( $(this).val() != ''){
+                    if(this.id=="player2Field"){
+                        if($('#player1Field').val() != ''){
+                            $('#btn').prop("disabled", false);
+                        }
+                    }else if(this.id=="player1Field"){
+                        if($('#player2Field').val() != ''){
+                            $('#btn').prop("disabled", false);
+                        }
+                    }
+                }
+            });
+        });
+        function forward2Game() {
+            window.location='views/memoryChampMain.html?name1='+$('#player1Field').val()+'&'+'name2='+$('#player2Field').val();
+        }
+    </script>
+</head>
+
+<header>
+    <div class="logo col-md-12">
+        <a href="index.html" class="logo">M3M0rY ChAmP</a>
+    </div>
+</header>
+<body>
+<div class="playerContainer">
+    <form id="player1">
+        <div class="container-fluid container-padding">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="sr-only" for="player1Field">Full Name</label>
+                        <input type="text" class="form-control full-name-field" name="" id="player1Field" placeholder="Player 1 Name"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="playerContainer">
+    <form id="player2">
+            <div class="container-fluid container-padding">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                        <label class="sr-only" for="player2Field">Full Name</label>
+                        <input type="text" class="form-control" name="" id="player2Field" placeholder="Player 2 Name"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </form>
+</div>
+    <form id='formName'>
+        <div class="submitBtn">
+            <button id="btn" type="button" class="btn btn-warning" disabled="disabled" onclick="forward2Game()">Let's Go baby!</button>
+        </div>
+    </form>
+</body>
+</html>
